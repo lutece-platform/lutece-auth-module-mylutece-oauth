@@ -1,0 +1,38 @@
+<div id="content-box-actions">
+	<form method="post" action="jsp/admin/plugins/mylutece/modules/oauth/CreateOAuth.jsp">
+		<input type="submit" tabindex="1" value="#i18n{module.mylutece.oauth.manage_oauth.buttonLabelCreate}" class="button bt-toolbar" />
+    </form>
+</div>
+<div class="content-box" >
+
+    <h2>#i18n{module.mylutece.oauth.manage_oauth.title}</h2>
+	<form method="post" action="jsp/admin/plugins/mylutece/modules/oauth/ManageOAuth.jsp">
+        <@paginationAdmin paginator=paginator combo=1 form=0 />
+    </form>
+    <table>
+        <tr>
+            <th>
+            	#i18n{module.mylutece.oauth.manage_oauth.table.serviceName}
+            	<@sort jsp_url="jsp/admin/plugins/mylutece/modules/oauth/ManageOAuth.jsp" attribute="authServiceName" />
+            </th>
+            <th>
+            	#i18n{module.mylutece.oauth.manage_oauth.table.action}
+            </th>
+        </tr>
+
+        <#list oauth_list as oauth >
+	        <tr>
+	            <td>
+	                <a href="jsp/admin/plugins/mylutece/modules/oauth/ModifyOAuth.jsp?oauth_id=${oauth.name}" title="#i18n{module.mylutece.oauth.manage_oauth.action.modify}"
+	                	class="bullet-link">${oauth.authServiceName}</a>
+	            </td>
+	            <td>
+		            <a href="jsp/admin/plugins/mylutece/modules/oauth/ConfirmRemoveOAuth.jsp?oauth_id=${oauth.name}">
+		                <img src="images/admin/skin/actions/delete.png" class="icon" alt="#i18n{module.mylutece.oauth.action.remove}" title="#i18n{module.mylutece.oauth.action.remove}" />
+		            </a>
+		        </td>
+	        </tr>
+        </#list>
+    </table>
+    <@paginationAdmin paginator=paginator />
+</div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!--                  Data Access Objects (DAO)                   -->
+    <bean id="mylutece-oauth.oauthAuthenticationDAO" class="fr.paris.lutece.plugins.mylutece.modules.oauth.business.OAuthAuthenticationDAO" />
+    <bean id="mylutece-oauth.authenticationFactory" class="fr.paris.lutece.plugins.mylutece.modules.oauth.authentication.OAuthAuthenticationFactory" />
+    <bean id="mylutece-oauth.credRetriever-XML" class="fr.paris.lutece.plugins.mylutece.modules.oauth.authentication.XMLCredentialRetriever">
+    	<property name="format" value="xml" />
+    </bean>
+    
+    <bean id="mylutece-oauth.credRetriever-JSON" class="fr.paris.lutece.plugins.mylutece.modules.oauth.authentication.JSONCredentialRetriever">
+    	<property name="format" value="json" />
+    	<property name="tags">
+    		<map>
+    			<entry>
+    				<key><value>user.name.civility</value></key>
+    				<value>civility,civi</value>
+    			</entry>
+    		</map>
+    	</property>
+    </bean>
+    <bean id="mylutece-oauth.oauthService" class="fr.paris.lutece.plugins.mylutece.modules.oauth.service.OAuthService" />
+</beans>

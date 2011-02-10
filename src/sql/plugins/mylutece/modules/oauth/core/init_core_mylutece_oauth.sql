@@ -1,0 +1,2 @@
+INSERT INTO core_admin_right (id_right,name,level_right,admin_url,description,is_updatable,plugin_name,id_feature_group,icon_url,documentation_url) VALUES 
+('OAUTH_MANAGEMENT', 'module.mylutece.oauth.adminFeature.oauth_management.name', 3, 'jsp/admin/plugins/mylutece/modules/oauth/ManageOAuth.jsp', 'module.mylutece.oauth.adminFeature.oauth_management.description', 0, 'mylutece-oauth', 'USERS', NULL, NULL);
