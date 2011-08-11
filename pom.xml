@@ -50,7 +50,7 @@
 
 	<properties>
 		<componentName>mylutece-oauth</componentName>
-		<jiraProjectName>OAUTH</jiraProjectName>
+		<jiraProjectName>MYLUTECEOAUTH</jiraProjectName>
 		<jiraComponentId>10421</jiraComponentId>
 	</properties>
 
