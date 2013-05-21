@@ -117,10 +117,8 @@ public class OAuthJspBean extends PluginAdminPageJspBean
      */
     public OAuthJspBean(  )
     {
-        _factory = (OAuthAuthenticationFactory) SpringContextService.getPluginBean( OAuthPlugin.PLUGIN_NAME,
-                "mylutece-oauth.authenticationFactory" );
-        _service = (OAuthService) SpringContextService.getPluginBean( OAuthPlugin.PLUGIN_NAME,
-                "mylutece-oauth.oauthService" );
+        _factory = (OAuthAuthenticationFactory) SpringContextService.getBean( "mylutece-oauth.authenticationFactory" );
+        _service = (OAuthService) SpringContextService.getBean( "mylutece-oauth.oauthService" );
     }
 
     /**

@@ -1,48 +1,98 @@
-<div class="content-box">
+<div class="row-fluid">
+    <div class="span12">
 
-	<h2>#i18n{module.mylutece.oauth.create_oauth.title}</h2>
+        <form class="form-horizontal" method="post" action="jsp/admin/plugins/mylutece/modules/oauth/DoModifyOAuth.jsp" name="modify_oauth">
+            <fieldset>
+                <legend>#i18n{module.mylutece.oauth.create_oauth.title}</legend>
 
-	<form method="post" action="jsp/admin/plugins/mylutece/modules/oauth/DoModifyOAuth.jsp" name="modify_oauth">
-           <input type="hidden" id="auth_name" name="auth_name" value="${oauth.name}" />
-           <p>
-                <label for="auth_service_name">#i18n{module.mylutece.oauth.create_oauth.serviceName} * :</label>
-                <input value="${oauth.authServiceName!}" type="text" id="auth_service_name" name="auth_service_name" size="70" maxlength="100" tabindex="2" />
-            </p>
-            <p>
-                <label for="auth_icon_url">#i18n{module.mylutece.oauth.create_oauth.iconUrl} * :</label>
-                <input value="${oauth.iconUrl!}" type="text" id="auth_icon_url" name="auth_icon_url" size="70" maxlength="100" tabindex="3" />
-            </p>
-            <p>
-                <label for="request_token_url">#i18n{module.mylutece.oauth.create_oauth.requestUrl} * :</label>
-                <input value="${oauth.requestTokenEndpointUrl!}" type="text" id="request_token_url" name="request_token_url" size="70" maxlength="100" tabindex="4" />
-            </p>
-            <p>
-                <label for="access_token_url">#i18n{module.mylutece.oauth.create_oauth.tokenUrl} * :</label>
-                <input value="${oauth.accessTokenEndpointUrl!}" type="text" id="access_token_url" name="access_token_url" size="70" maxlength="100" tabindex="5" />
-            </p>
-            <p>
-                <label for="authorize_url">#i18n{module.mylutece.oauth.create_oauth.authorizeUrl} * :</label>
-                <input value="${oauth.authorizeWebsiteUrl!}" type="text" id="authorize_url" name="authorize_url" size="70" maxlength="100" tabindex="6" />
-            </p>
-            <p>
-                <label for="consumer_key">#i18n{module.mylutece.oauth.create_oauth.consumerKey} * :</label>
-                <input value="${oauth.consumerKey!}" type="text" id="consumer_key" name="consumer_key" size="70" maxlength="100" tabindex="7" />
-            </p>
-            <p>
-                <label for="consumer_secret">#i18n{module.mylutece.oauth.create_oauth.consumerSecret} * :</label>
-                <input value="${oauth.consumerSecret!}" type="text" id="consumer_secret" name="consumer_secret" size="70" maxlength="100" tabindex="8" />
-            </p>
-            <p>
-                <label for="credential_url">#i18n{module.mylutece.oauth.create_oauth.credentialsUrl} * :</label>
-                <input value="${oauth.credentialUrl!}" type="text" id="credential_url" name="credential_url" size="70" maxlength="100" tabindex="9" />
-            </p>
-            <p>
-                <label for="credential_format">#i18n{module.mylutece.oauth.create_oauth.credentialsFormat} * :</label>
-                <input value="${oauth.credentialFormat!}" type="text" id="credential_format" name="credential_format" size="70" maxlength="100" tabindex="10" />
-            </p>            
-            <p>
-            	<input type="submit" value="#i18n{module.mylutece.oauth.create_oauth.buttonLabelValidate}" class="button" tabindex="11" />
-			    <input type="submit" class="button" name="cancel" value="#i18n{portal.admin.message.buttonCancel}" />
-            </p>
-	</form>
+                <input type="hidden" id="auth_name" name="auth_name" value="${oauth.name}" />
+
+                <div class="control-group">
+                    <label class="control-label" for="auth_service_name">#i18n{module.mylutece.oauth.create_oauth.serviceName} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.authServiceName!}" type="text" id="auth_service_name" name="auth_service_name" size="70" maxlength="100" tabindex="2" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="auth_icon_url">#i18n{module.mylutece.oauth.create_oauth.iconUrl} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.iconUrl!}" type="text" id="auth_icon_url" name="auth_icon_url" size="70" maxlength="100" tabindex="3" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="request_token_url">#i18n{module.mylutece.oauth.create_oauth.requestUrl} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.requestTokenEndpointUrl!}" type="text" id="request_token_url" name="request_token_url" size="70" maxlength="100" tabindex="4" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="access_token_url">#i18n{module.mylutece.oauth.create_oauth.tokenUrl} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.accessTokenEndpointUrl!}" type="text" id="access_token_url" name="access_token_url" size="70" maxlength="100" tabindex="5" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="authorize_url">#i18n{module.mylutece.oauth.create_oauth.authorizeUrl} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.authorizeWebsiteUrl!}" type="text" id="authorize_url" name="authorize_url" size="70" maxlength="100" tabindex="6" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="consumer_key">#i18n{module.mylutece.oauth.create_oauth.consumerKey} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.consumerKey!}" type="text" id="consumer_key" name="consumer_key" size="70" maxlength="100" tabindex="7" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="consumer_secret">#i18n{module.mylutece.oauth.create_oauth.consumerSecret} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.consumerSecret!}" type="text" id="consumer_secret" name="consumer_secret" size="70" maxlength="100" tabindex="8" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="credential_url">#i18n{module.mylutece.oauth.create_oauth.credentialsUrl} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.credentialUrl!}" type="text" id="credential_url" name="credential_url" size="70" maxlength="100" tabindex="9" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="credential_format">#i18n{module.mylutece.oauth.create_oauth.credentialsFormat} * :</label>
+                    <div class="controls">
+                        <input value="${oauth.credentialFormat!}" type="text" id="credential_format" name="credential_format" size="70" maxlength="100" tabindex="10" />
+                        <span class="help-block"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary btn-small" type="submit" >#i18n{module.mylutece.oauth.create_oauth.buttonLabelValidate}</button>
+                    <button class="btn btn-small" type="submit" name="cancel" >#i18n{portal.admin.message.buttonCancel}</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
 </div>
